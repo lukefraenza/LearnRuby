@@ -24,3 +24,10 @@ p inst_section['oboe']
 p inst_section['cello']
 p inst_section['bassoon']
 puts inst_section['bassoon']
+
+
+histogram = Hash.new(0) # The default value is now zero
+puts histogram['ruby'] 
+histogram['ruby'] = histogram['ruby'] + 1
+puts histogram['ruby'] 
+
