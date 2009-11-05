@@ -6,6 +6,10 @@ class BookInStock
     @price = Float(price)
   end
 
+  def price=(new_price)
+    @price = new_price
+  end
+
   def to_s
     "ISBN: #{@isbn}, price: #{@price}"
   end
@@ -21,3 +25,6 @@ puts b3
 
 puts "ISBN  = #{b1.isbn}"
 puts "Price = #{b1.price}"
+
+b1.price = b1.price * 0.75  #discount price
+puts "New price = #{b1.price}"
