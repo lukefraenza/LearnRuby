@@ -22,9 +22,6 @@ sorted = counts.sort_by {|word, count| count}
 top_five = sorted.last(5)
 
 
-for i in 0...5
-  word = top_five[i][0]
-  count = top_five[i][1]
+top_five.each do |word, count|
   puts "#{word}: #{count}"
 end
-
