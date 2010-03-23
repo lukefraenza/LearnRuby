@@ -1,7 +1,12 @@
 class Account
+  attr_reader :cleared_balance   # accessor method 'cleared_balance
+  protected   :cleared_balance   # and make it protected
   attr_accessor :balance
   def initialize(balance)
     @balance = balance
+  end
+  def greater_balance_than(other)
+    return @cleared_balance > other.cleared_balance
   end
 end
 
