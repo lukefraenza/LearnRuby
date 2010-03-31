@@ -58,4 +58,20 @@ f.each_with_index do |line,  index|
 end
 f.close
 
+# inject lets you accumulate a value across the members of a collection.
+# for example, you can sum all the elements in an array, etc.
+
+p [1,3,5,7].inject(0) {|sum, element| sum+element}
+p [1,3,5,7].inject(1) {|product, element| product*element}
+
+# called with no parameter uses the first element as the initial value
+p [1,3,5,7].inject {|sum, element| sum+element}
+p [1,3,5,7].inject {|product, element| product*element}
+
+# you can also give inject the name of a method you want to apply to
+# successive elements of the collection
+
+p [1,3,5,7].inject(:+)
+p [1,3,5,7].inject(:*)
+
 
